@@ -1,0 +1,115 @@
+:root {
+  --hue: 200;
+  --saturation: 50%;
+  --background-color: hsl(var(--hue), var(--saturation), 20%);
+  --barcolor: hsl(var(--hue), var(--saturation), 75%);
+}
+body {
+  background-image: url("./desk.jpg");
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+}
+.score {
+  width: auto;
+  height: auto;
+  color: var(--barcolor);
+  display: flex;
+  text-align: center;
+  font-size: 4.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  opacity: 1;
+}
+#p1 {
+  border-right: 0.2rem solid var(--barcolor);
+  padding-right: 1rem;
+  position: absolute;
+  right: 50%;
+}
+#p2 {
+  padding-left: 1rem;
+  position: absolute;
+  left: 50%;
+}
+.ball {
+  --x: 50;
+  --y: 50;
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  border-radius: 50%;
+  top: calc(var(--y) * 1vh);
+  left: calc(var(--x) * 1vw);
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  background-color: white;
+}
+.bar {
+  --position: 50;
+  width: 1.2rem;
+  height: 10rem;
+  position: absolute;
+  top: calc(var(--position) * 1vh);
+  transform: translateY(-50%);
+  background-color: var(--barcolor);
+}
+#bar1 {
+  left: 0%;
+}
+#bar2 {
+  right: 0%;
+}
+.round {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  opacity: 0;
+  top: 50%;
+  color: white;
+  font-size: 4rem;
+  width: auto;
+  height: 5rem;
+}
+#roundnum {
+  color: var(--barcolor);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  top: 20%;
+  opacity: 1;
+  font-size: 2rem;
+  width: auto;
+  height: 5rem;
+}
+#hs {
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  top: 40%;
+  color: white;
+}
+#ps1 {
+  position: absolute;
+  color: var(--barcolor);
+  font-size: 2rem;
+  top: 10%;
+  left: 10%;
+  font-weight: bold;
+}
+#ps2 {
+  font-weight: bold;
+  position: absolute;
+  color: var(--barcolor);
+  font-size: 2rem;
+  top: 10%;
+  right: 10%;
+}
